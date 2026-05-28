@@ -9,7 +9,7 @@ int choices[20];
 
 void startgame(void) {
     makechoices();
-    startgameRound(0);
+    gameRound(0);
 }
 
 void makechoices(void) {
@@ -19,7 +19,7 @@ void makechoices(void) {
     }
 }
 
-void startgameRound(int round) {
+void gameRound(int round) {
     printf("Pick 1, 2, or 3: ");
     
     // get the player's choice
@@ -37,16 +37,16 @@ void startgameRound(int round) {
                 printf("You Win!\n");
                 exit(0);
             }
-            startgameRound(round + 1); // move to the next round
+            gameRound(round + 1); // move to the next round
             // check if player wins
 
         } else {
             printf("Wrong!\n");
-            startgameRound(0); // restart from round 0
+            gameRound(0); // restart from round 0
         }
     } else {
         printf("Not an option.\n");
-        startgameRound(round); // stay on current round
+        gameRound(round); // stay on current round
     }
 }
 
