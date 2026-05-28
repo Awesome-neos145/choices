@@ -17,3 +17,6 @@ You need Borland C++ 3.1 and a copy of the DOS code. C89 has some differences so
 This project is licensed under the GNU GPL v3.0 license.
 # Are there any prebuilt binaries?
 Head over to the releases tab to grab the binaries.
+# Credits
+tredI9100 made the icon for the Windows version of Choices.
+I coded this.
