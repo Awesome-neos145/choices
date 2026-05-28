@@ -18,5 +18,5 @@ This project is licensed under the GNU GPL v3.0 license.
 # Are there any prebuilt binaries?
 Head over to the releases tab to grab the binaries.
 # Credits
-tredI9100 made the icon for the Windows version of Choices.
+tredI9100 made the icon for the Windows version of Choices. He also suggested the name for DOS Choices.
 I coded this.
