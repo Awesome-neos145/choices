@@ -24,7 +24,7 @@ int main() {
             printf("If you make the wrong choice, you will be sent back to the beginning.\n");
             printf("You will be presented with 3 choices, 20 times.\n");
             printf("Each choice is completely randomized each time the game starts.\n");
-            // go back to the start of main
+            printf("Type 'play', 'help', or 'quit': ");
         } else if (strcmp(starterchoice, "quit") == 0) {
             // quit the game
             exit(0);
