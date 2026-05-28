@@ -3,3 +3,5 @@
 void startgame(void);
 void gameRound(int round);
 void makechoices(void);
+
+// #define FUNNY

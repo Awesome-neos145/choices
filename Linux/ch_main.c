@@ -29,8 +29,13 @@ int main() {
             // quit the game
             exit(0);
         } else {
+        #ifdef FUNNY
+            printf("oh fuck you man");
+            abort();
+        #else
             printf("That wasn't valid. Quitting...\n");
             exit(0); // this is what you get for not reading my shit man
+        #endif
         }
     }
 }
