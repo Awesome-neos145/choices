@@ -1,5 +1,5 @@
 # Choices
-Choices is a game about picking the correct choices.
+Choices is a game about picking the correct numbers.
 This is one of my first C++ projects I've ever made myself. (AMP doesn't count, it's a source code modification)
 # How to play?
 The premise of the game is simple:
