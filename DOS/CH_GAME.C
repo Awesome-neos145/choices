@@ -22,32 +22,32 @@ void makechoices(void) {
 }
 
 void gameRound(int round) {
-    printf("Pick 1, 2, or 3: ");
-    
-    // get the player's choice
-    fgets(playerchoice, sizeof(playerchoice), stdin);
-    playerchoice[strcspn(playerchoice, "\n")] = 0; // get rid of the dumbass newline
-    
-    // process the player's choice
-    if (strcmp(playerchoice, "1") == 0 || strcmp(playerchoice, "2") == 0 || strcmp(playerchoice, "3") == 0) {
-        int choice = atoi(playerchoice);
+    while (1) {  // begin loop
+        printf("Pick 1, 2, or 3: ");
         
-        if (choice == choices[round]) {
-            printf("Correct!\n");
-            if (round == 19) {
-                printf("You Win!\n");
-                exit(0);
+        // get the player's choice
+        fgets(playerchoice, sizeof(playerchoice), stdin);
+        playerchoice[strcspn(playerchoice, "\n")] = 0; // get rid of the dumbass newline
+        
+        // process the player's choice
+        if (strcmp(playerchoice, "1") == 0 || strcmp(playerchoice, "2") == 0 || strcmp(playerchoice, "3") == 0) {
+            int choice = atoi(playerchoice);
+            
+            if (choice == choices[round]) {
+                printf("Correct!\n");
+                if (round == 19) {
+                    printf("You Win!\n");
+                    exit(0);
+                }
+                round++;  // move to the next round
+            } else {
+                printf("Wrong!\n");
+                round = 0;  // restart from round 0
             }
-            gameRound(round + 1); // move to the next round
-            // check if player wins
-
         } else {
-            printf("Wrong!\n");
-            gameRound(0); // restart from round 0
+            printf("Not an option.\n");
+            // stay on current round
         }
-    } else {
-        printf("Not an option.\n");
-        gameRound(round); // stay on current round
     }
 }
 
