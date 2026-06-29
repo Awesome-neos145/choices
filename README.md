@@ -13,6 +13,8 @@ Just run `make` in the directory of your downloaded code and it should build a f
 You need MinGW to compile this one. Either 32 bit or 64 bit works fine. Just install that and it should compile just fine.
 # Compiling for DOS
 You need Borland C++ 3.1 and a copy of the DOS code. C89 has some differences so the code is a little different. Load up `CHOICES.PRJ` and go to `Compile > Build all`. If done correctly, it should link up and create a working 16-bit executable for you.
+# Compiling for Wii
+You will need to follow the setup process for devkitPro to get it working correctly. After everything necessary is installed, run `setup.sh` in the Wii folder. Then run `make`.
 # License
 This project is licensed under the GNU GPL v3.0 license.
 # Are there any prebuilt binaries?
