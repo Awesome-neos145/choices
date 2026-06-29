@@ -3,15 +3,22 @@
 #include <stdlib.h>
 #include <string.h>
 
+// wii includes
 #include <gccore.h>
-
 #include <wiiuse/wpad.h>
+#include <aesndlib.h>
+#include <gcmodplay.h>
+#include <gctypes.h>
+
+#include "music_mod.h"
 
 // my own includes
 #include "ch_def.h"
 
 void startgame(void);
-void PPCHalt(void);
+void crash_yo_shit(void);
+
+static MODPlay play;
 
 int main(int argc, char **argv) {
 
@@ -40,6 +47,13 @@ int main(int argc, char **argv) {
 
     // controller setup
     WPAD_Init();
+
+    // audio setup
+    AESND_Init();
+    MODPlay_Init(&play);
+    MODPlay_SetMOD(&play, music_mod);
+    MODPlay_SetVolume(&play, 63, 63);
+    MODPlay_Start(&play);
 
     // start game
     printf("Choices\n");
@@ -72,8 +86,17 @@ int main(int argc, char **argv) {
         else if (btpress & WPAD_BUTTON_MINUS) {
             // experience eardrum implosion moron
             printf("you know what's funny???");
-            PPCHalt();
+            crash_yo_shit();
         }
         #endif
     }
+}
+
+void crash_yo_shit(void) {
+    asm volatile (
+        "lis 3, 0\n"
+        "mtmsr 3\n"
+        "1:\n"
+        "b 1b\n"
+    );
 }

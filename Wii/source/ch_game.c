@@ -82,6 +82,9 @@ void gameRound(int round) {
                 round = 0;  // restart from round 0
             }
             printf("Press A, 1, or 2: \n");
+        } else if (btpress & WPAD_BUTTON_HOME) {
+            printf("Exiting...\n");
+            exit(0);
         } else if (btpress != 0) {
             printf("Not an option.\n");
             // stay on current round

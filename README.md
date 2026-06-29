@@ -14,11 +14,11 @@ You need MinGW to compile this one. Either 32 bit or 64 bit works fine. Just ins
 # Compiling for DOS
 You need Borland C++ 3.1 and a copy of the DOS code. C89 has some differences so the code is a little different. Load up `CHOICES.PRJ` and go to `Compile > Build all`. If done correctly, it should link up and create a working 16-bit executable for you.
 # Compiling for Wii
-You will need to follow the setup process for devkitPro to get it working correctly. After everything necessary is installed, run `setup.sh` in the Wii folder. Then run `make`.
+You will need to follow the setup process for devkitPro to get it working correctly. After everything necessary is installed, run `setup.sh` in the Wii folder. Then run the included `build.sh` file.
 # License
 This project is licensed under the GNU GPL v3.0 license.
 # Are there any prebuilt binaries?
 Head over to the releases tab to grab the binaries.
 # Credits
-tredI9100 made the icon for the Windows version of Choices. He also suggested the name for DOS Choices.
+tredI9100 created the icon for Choices. He also suggested the name for DOS Choices.
 I coded this.
