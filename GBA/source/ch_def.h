@@ -2,8 +2,11 @@
 
 void startgame(void);
 void gameRound(int round);
+extern unsigned int ticker;
 void makechoices(void);
 
-#define VERSION "v1.2-wii"
+#define VERSION "v1.2-gba"
+
+// #define DEBUG
 
 // #define FUNNY

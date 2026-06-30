@@ -23,6 +23,7 @@ void makechoices(void) {
 }
 
 void gameRound(int round) {
+    printf("Round %d\n", round + 1);
     printf("Press A, 1, or 2: \n");
 
     while (1) {  // begin loop
@@ -41,6 +42,7 @@ void gameRound(int round) {
             int choice = 1;
             
             if (choice == choices[round]) {
+                printf("\x1b[2J\x1b[H");
                 printf("Correct!\n");
                 if (round == 19) {
                     printf("You Win!\n");
@@ -48,14 +50,17 @@ void gameRound(int round) {
                 }
                 round++;  // move to the next round
             } else {
+                printf("\x1b[2J\x1b[H");
                 printf("Wrong!\n");
                 round = 0;  // restart from round 0
             }
+            printf("Round %d\n", round + 1);
             printf("Press A, 1, or 2: \n");
         } else if (btpress & WPAD_BUTTON_1) {
             int choice = 2;
             
             if (choice == choices[round]) {
+                printf("\x1b[2J\x1b[H");
                 printf("Correct!\n");
                 if (round == 19) {
                     printf("You Win!\n");
@@ -63,14 +68,17 @@ void gameRound(int round) {
                 }
                 round++;  // move to the next round
             } else {
+                printf("\x1b[2J\x1b[H");
                 printf("Wrong!\n");
                 round = 0;  // restart from round 0
             }
+            printf("Round %d\n", round + 1);
             printf("Press A, 1, or 2: \n");
         } else if (btpress & WPAD_BUTTON_2) {
             int choice = 3;
             
             if (choice == choices[round]) {
+                printf("\x1b[2J\x1b[H");
                 printf("Correct!\n");
                 if (round == 19) {
                     printf("You Win!\n");
@@ -78,14 +86,17 @@ void gameRound(int round) {
                 }
                 round++;  // move to the next round
             } else {
+                printf("\x1b[2J\x1b[H");
                 printf("Wrong!\n");
                 round = 0;  // restart from round 0
             }
+            printf("Round %d\n", round + 1);
             printf("Press A, 1, or 2: \n");
         } else if (btpress & WPAD_BUTTON_HOME) {
             printf("Exiting...\n");
             exit(0);
         } else if (btpress != 0) {
+            printf("\x1b[2J\x1b[H");
             printf("Not an option.\n");
             // stay on current round
             printf("Press A, 1, or 2: \n");

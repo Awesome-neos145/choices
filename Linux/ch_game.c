@@ -21,6 +21,7 @@ void makechoices(void) {
 
 void gameRound(int round) {
     while (1) {  // begin loop
+        printf("Round %d\n", round + 1);
         printf("Pick 1, 2, or 3: ");
         
         // get the player's choice
@@ -33,17 +34,20 @@ void gameRound(int round) {
             int choice = atoi(playerchoice);
             
             if (choice == choices[round]) {
-                printf("Correct!\n");
+                printf("\e[2J\e[H");
+                printf("Correct!\n\n");
                 if (round == 19) {
-                    printf("You Win!\n");
+                    printf("You Win!\n\n");
                     exit(0);
                 }
                 round++;  // move to the next round
             } else {
-                printf("Wrong!\n");
+                printf("\e[2J\e[H");
+                printf("Wrong!\n\n");
                 round = 0;  // restart from round 0
             }
         } else {
+            printf("\e[2J\e[H");
             printf("Not an option.\n");
             // stay on current round
         }

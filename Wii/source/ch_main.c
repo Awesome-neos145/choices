@@ -56,8 +56,8 @@ int main(int argc, char **argv) {
     MODPlay_Start(&play);
 
     // start game
-    printf("Choices\n");
-    printf("A stupid little excuse for a beginner C game by awes145\n");
+    printf("Choices\n\n");
+    printf("A stupid little excuse for a beginner C game by awes145\n\n");
     printf("Button A: play\n");
     printf("Button 1: help\n");
     printf("HOME: quit\n");
@@ -69,17 +69,22 @@ int main(int argc, char **argv) {
         u32 btpress = WPAD_ButtonsDown(0);
         if (btpress & WPAD_BUTTON_A) {
             // start the game
+            printf("\x1b[2J\x1b[H");
             startgame();
         } else if (btpress & WPAD_BUTTON_1) {
-            printf("Choices is a game about picking the correct choices.\n");
-            printf("If you make the wrong choice, you will be sent back to the beginning.\n");
-            printf("You will be presented with 3 choices, 20 times.\n");
-            printf("Each choice is completely randomized each time the game starts.\n");
+            printf("\x1b[2J\x1b[H");
+            printf("Choices is a game about picking the correct choices.\n\n");
+            printf("If you make the wrong choice, you will be sent back to the beginning.\n\n");
+            printf("You will be presented with 3 choices, 20 times.\n\n");
+            printf("Each choice is completely randomized each time the game starts.\n\n");
+            printf("Version %s\n", VERSION);
+            printf("---------------------------------------\n");
             printf("Button A: play\n");
             printf("Button 1: help\n");
             printf("HOME: quit\n");
         } else if (btpress & WPAD_BUTTON_HOME) {
             // quit the game
+            printf("Exiting...\n");
             exit(0);
         } 
         #ifdef FUNNY
