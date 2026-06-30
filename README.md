@@ -13,12 +13,10 @@ Just run `make` in the directory of your downloaded code and it should build a f
 You need MinGW to compile this one. Either 32 bit or 64 bit works fine. Just install that and it should compile just fine.
 # Compiling for DOS
 You need Borland C++ 3.1 and a copy of the DOS code. C89 has some differences so the code is a little different. Load up `CHOICES.PRJ` and go to `Compile > Build all`. If done correctly, it should link up and create a working 16-bit executable for you.
-# Compiling for Wii
-You will need to follow the setup process for devkitPro to get it working correctly. After everything necessary is installed, run `build.sh` in the Wii folder.
+# Compiling for Wii/3DS/GBA
+You will need to follow the setup process for devkitPro to get it working correctly. After everything necessary is installed, run `build.sh` in the Wii, 3DS, or GBA folders.
 
-Because this version of Choices supports MOD music, you can replace the MOD file in `/data` to have your own music play in the background.
-# Compiling for GBA
-You will need to follow the setup process for devkitPro to get it working correctly. After everything necessary is installed, run `build.sh` in the GBA folder.
+Because the Wii version of Choices supports MOD music, you can replace the MOD file in `/data` to have your own music play in the background.
 # Compiling for iPhoneOS 2.0 - iOS 10.3.4
 You must have made and compiled [cctools-port](https://github.com/tpoechtrager/cctools-port) and [apple-libdispatch](https://github.com/tpoechtrager/apple-libdispatch) to compile this game.
 
