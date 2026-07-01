@@ -18,8 +18,8 @@ int main() {
     printf("Choices Init...\n");
 
     printf("\x1b[2J");
-    printf("Choices for Nintendo 3DS\n");
-    printf("A stupid little excuse for a beginner C game by\nawes145\n");
+    printf("Choices for Nintendo 3DS\n\n");
+    printf("A stupid little excuse for a beginner C game by\nawes145\n\n");
     printf("Button A: play\n");
     printf("Button B: help\n");
     printf("START: quit\n");
