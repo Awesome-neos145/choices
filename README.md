@@ -17,6 +17,10 @@ You need Borland C++ 3.1 and a copy of the DOS code. C89 has some differences so
 You will need to follow the setup process for devkitPro to get it working correctly. After everything necessary is installed, run `build.sh` in the Wii, 3DS, GBA, or NDS folders.
 
 Because the Wii version of Choices supports MOD music, you can replace the MOD file in `/data` to have your own music play in the background.
+# Compiling for PlayStation Vita
+VitaSDK is required to compile. You will need to set it up through [their instructions](https://vitasdk.org/).
+
+Then go into the PSVita folder and run `cmake .` to generate required files, then run `make`. After that, it should create an installable VPK.
 # Compiling for iPhoneOS 2.0 - iOS 10.3.4
 You must have made and compiled [cctools-port](https://github.com/tpoechtrager/cctools-port) and [apple-libdispatch](https://github.com/tpoechtrager/apple-libdispatch) to compile this game.
 
